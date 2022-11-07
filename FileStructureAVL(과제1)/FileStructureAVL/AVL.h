@@ -4,9 +4,9 @@
 struct AVL_Node 
 {
 	int key; 
-	struct AVL_Node* left; //왼쪽
-	struct AVL_Node* right; //오른쪽
-	struct AVL_Node* Parent; //부모
+	struct AVL_Node* left; 
+	struct AVL_Node* right; 
+	int height;
 	// 다른 멤버 추가 가능 
 };
 
@@ -24,7 +24,7 @@ struct AVL_Node* AVL_create_node(int key);
  * 성공시 0 반환 
  * 실패시 (키가 있는 경우) 이외의 값 반환 
  */
-int AVL_insert_node(struct AVL_Node* root, struct AVL_Node* new_node);
+int AVL_insert_node(struct AVL_Node** root, struct AVL_Node* new_node);
 
 /*
  * 트리를 전위순회 하며 노드의 키 값을 순서대로 출력

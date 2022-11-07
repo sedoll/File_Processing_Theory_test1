@@ -27,7 +27,7 @@ void mytest(void)
 		new_node = AVL_create_node(rand_key);
 
 		// 노드 삽입
-		if (AVL_insert_node(mytree, new_node) != 0) {
+		if (AVL_insert_node(&mytree, new_node) != 0) {
 			// 삽입 실패시 생성한 노드 삭제 
 			free(new_node);
 		}
