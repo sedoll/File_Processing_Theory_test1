@@ -20,9 +20,40 @@ C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제
 C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(87,27): warning C4024: 'leftRotate': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
 C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(87,32): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
 C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(90,16): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
-C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(97,9): warning C4013: 'AVL_print_keys_Preorder'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(96,9): warning C4013: 'AVL_print_keys_Preorder'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
   main.c
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(68,30): warning C4047: '<': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(69,25): warning C4013: 'insertNode'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(69,65): warning C4047: '=': 'AVL_Node *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(70,35): warning C4047: '>': 'AVL_Node *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(71,67): warning C4047: '=': 'AVL_Node *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(73,20): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(77,34): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(77,30): warning C4024: 'getBalance': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(79,32): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(79,28): warning C4024: 'rightRotate': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(79,33): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(82,31): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(82,27): warning C4024: 'leftRotate': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(82,32): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(86,32): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(86,28): warning C4024: 'rightRotate': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(86,33): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(91,31): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(91,27): warning C4024: 'leftRotate': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(91,32): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(94,16): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\main.c(100,9): warning C4013: 'AVL_print_keys_Preorder'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
   코드를 생성하고 있습니다...
+main.obj : error LNK2005: AVL_create_node이(가) AVL.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: AVL_insert_node이(가) AVL.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: AVL_print_keys_preorder이(가) AVL.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: getBalance이(가) AVL.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: height이(가) AVL.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: leftRotate이(가) AVL.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: rightRotate이(가) AVL.obj에 이미 정의되어 있습니다.
 AVL.obj : error LNK2019: insertNodeAVL_insert_node 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2001: 확인할 수 없는 외부 기호 insertNode
 AVL.obj : error LNK2019: AVL_print_keys_PreorderAVL_print_keys_preorder 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2001: 확인할 수 없는 외부 기호 AVL_print_keys_Preorder
 C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\x64\Debug\FileStructureAVL.exe : fatal error LNK1120: 2개의 확인할 수 없는 외부 참조입니다.

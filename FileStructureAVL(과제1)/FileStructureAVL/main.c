@@ -6,7 +6,7 @@
 #include "AVL.h"
 
 #define MAX_TEST_COUNT 10 
-#define MAX_KEY_RANGE 100 
+#define MAX_KEY_RANGE 100
 
 void mytest(void)
 {
