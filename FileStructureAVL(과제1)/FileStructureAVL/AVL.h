@@ -10,6 +10,8 @@ struct AVL_Node
 	// 다른 멤버 추가 가능 
 };
 
+int height(struct AVL_Node* N);
+
 /*
  * AVL_Node를 할당
  * 구조체 멤버 초기화 
@@ -18,6 +20,10 @@ struct AVL_Node
  * 실패시 NULL 반환 
  */
 struct AVL_Node* AVL_create_node(int key);
+
+struct AVL_Node* AVL_create_node(int key);
+struct AVL_Node* rightRotate(struct AVL_Node* y);
+int getBalance(struct AVL_Node* N);
 
 /*
  * 파라미터로 주어진 AVL_Node를 AVL 트리의 root 노드에 삽입

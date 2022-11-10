@@ -1,0 +1,28 @@
+﻿  AVL.c
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(64,30): warning C4047: '<': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(65,25): warning C4013: 'insertNode'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(65,65): warning C4047: '=': 'AVL_Node *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(66,35): warning C4047: '>': 'AVL_Node *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(67,67): warning C4047: '=': 'AVL_Node *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(69,20): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(73,34): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(73,30): warning C4024: 'getBalance': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(75,32): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(75,28): warning C4024: 'rightRotate': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(75,33): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(78,31): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(78,27): warning C4024: 'leftRotate': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(78,32): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(82,32): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(82,28): warning C4024: 'rightRotate': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(82,33): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(87,31): warning C4047: '함수': 'AVL_Node *'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(87,27): warning C4024: 'leftRotate': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(87,32): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node *'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(90,16): warning C4047: 'return': 'int'의 간접 참조 수준이 'AVL_Node **'과(와) 다릅니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\FileStructureAVL\AVL.c(97,9): warning C4013: 'AVL_print_keys_Preorder'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  main.c
+  코드를 생성하고 있습니다...
+AVL.obj : error LNK2019: insertNodeAVL_insert_node 함수에서 참조되는 확인할 수 없는 외부 기호
+AVL.obj : error LNK2019: AVL_print_keys_PreorderAVL_print_keys_preorder 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureAVL(과제1)\x64\Debug\FileStructureAVL.exe : fatal error LNK1120: 2개의 확인할 수 없는 외부 참조입니다.
