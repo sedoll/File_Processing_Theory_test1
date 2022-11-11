@@ -3,7 +3,7 @@
 #include <string.h> 
 #include <time.h>
 
-#define MAX_TEST_COUNT 9
+#define MAX_TEST_COUNT 5
 #define MAX_KEY_RANGE 100
 
 int cnt = 1;
@@ -71,36 +71,20 @@ int getBalance(struct AVL_Node* N) {
 
 
 int AVL_insert_node(struct AVL_Node** root, struct AVL_Node* new_node) { // 노드 삽입
-    if (*root == NULL) {
-        printf("cnt: %d", cnt);
-        *root = AVL_create_node(new_node->key);
-        cnt++;
+    if (!*root) {
+        *root = calloc(sizeof * *root, 1);
+        (*root)->key = new_node->key;
+        (*root)->height = 1;
     }
-
-    if (new_node->key < (*root)->key)
-        (*root)->left = new_node;
-    else if ((*root)->key > new_node->key)
-        (*root)->right = new_node;
-    else
-        return -1;
-
-    (*root)->height = 1 + max(height((*root)->left), height((*root)->right));
-
-    int balance = getBalance(*root);
-    if (balance > 1 && new_node->key < (*root)->left->key)
-        rightRotate(*root);
-
-    if (balance < -1 && new_node->key >(*root)->right->key)
-        leftRotate(*root);
-
-    if (balance > 1 && new_node->key > (*root)->left->key) {
-        (*root)->left = leftRotate((*root)->left);
-        rightRotate(*root);
+    else if (new_node->key < (*root)->key) {
+        AVL_insert_node(&(*root)->left, new_node);
+        (*root)->height = (*root)->left->height + 1;
+        getBalance(*root);
     }
-
-    if (balance < -1 && new_node->key < (*root)->right->key) {
-        (*root)->right = rightRotate((*root)->right);
-        leftRotate(*root);
+    else if (new_node->key > (*root)->key) {
+        AVL_insert_node(&(*root)->right, new_node);
+        (*root)->height = (*root)->right->height + 1;
+        getBalance(*root);
     }
 
     return 0;
@@ -109,8 +93,8 @@ int AVL_insert_node(struct AVL_Node** root, struct AVL_Node* new_node) { // 노드
 void AVL_print_keys_preorder(struct AVL_Node* root) { // 전위 순회 출력
     if (root != NULL) {
         printf("%d\t", root->key); // 키값 출력
-        AVL_print_keys_preorder(root->left, root->key, root->right); // 왼쪽 서브트리로 이동
-        // AVL_print_keys_Preorder(root->right); // 오른쪽 서브트리로 이동
+        AVL_print_keys_preorder(root->left); // 왼쪽 서브트리로 이동
+        AVL_print_keys_Preorder(root->right); // 오른쪽 서브트리로 이동
     }
 }
 
@@ -122,16 +106,16 @@ void mytest(void)
 	int i;
 
 	// 랜덤 시드 초기화 
-	// srand((unsigned int)time(NULL));
-	for (i = 1; i < MAX_TEST_COUNT; i++) {
+	srand((unsigned int)time(NULL));
+	for (i = 0; i < MAX_TEST_COUNT; i++) {
 		struct AVL_Node* new_node = NULL;
 
 		// 랜덤 키 생성 
-		// rand_key = rand() % MAX_KEY_RANGE;
+		rand_key = rand() % MAX_KEY_RANGE;
 
 		// 노드 생성 
-		new_node = AVL_create_node(i);
-        // printf("%d ", i);
+		new_node = AVL_create_node(rand_key);
+        printf("%d %d\n", rand_key, i);
 
 		// 노드 삽입
 		if (AVL_insert_node(&mytree, new_node) != 0) {
