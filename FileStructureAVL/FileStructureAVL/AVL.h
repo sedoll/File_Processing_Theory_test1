@@ -7,14 +7,20 @@ struct AVL_Node
 	struct AVL_Node* left; 
 	struct AVL_Node* right;
 	int height;
-
 	// 다른 멤버 추가 가능 
 };
 
-int height(struct AVL_Node* N);
-int getBalance(struct AVL_Node* N);
-struct AVL_Node* rightRotate(struct AVL_Node* y);
-struct AVL_Node* leftRotate(struct AVL_Node* x);
+// 높이 계산
+int height(struct AVL_Node* node);
+
+// 밸런스 팩터 계산
+int getBalance(struct AVL_Node* node);
+
+// 오른쪽 회전
+struct AVL_Node* rightRotate(struct AVL_Node* b);
+
+// 왼쪽 회전
+struct AVL_Node* leftRotate(struct AVL_Node* a);
 
 /*
  * AVL_Node를 할당

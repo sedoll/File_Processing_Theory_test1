@@ -5,7 +5,7 @@
 
 #include "AVL.h"
 
-#define MAX_TEST_COUNT 10 
+#define MAX_TEST_COUNT 10
 #define MAX_KEY_RANGE 100 
 
 void mytest(void)
@@ -35,7 +35,7 @@ void mytest(void)
 	}
 
 	if (mytree) {
-		printf("\n");
+		printf("\nAVL 전위순회 출력:\t");
 		AVL_print_keys_preorder(mytree);
 	}
 }

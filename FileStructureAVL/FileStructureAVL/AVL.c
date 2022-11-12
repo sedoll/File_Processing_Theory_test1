@@ -6,45 +6,46 @@
 
 // AVL 구현
 
-int height(struct AVL_Node* N) {
-    if (N == NULL)
+// 높이 계산
+int height(struct AVL_Node* node) {
+    if (node == NULL)
         return 0;
-    return N->height;
+    return node->height;
 }
 
-// Get the balance factor
-int getBalance(struct AVL_Node* N) {
-    if (N == NULL)
+// 밸런스 팩터 계산
+int getBalance(struct AVL_Node* node) {
+    if (node == NULL)
         return 0;
-    return height(N->left) - height(N->right);
+    return height(node->left) - height(node->right);
 }
 
-// Right rotate
-struct AVL_Node* rightRotate(struct AVL_Node* y) {
-    struct AVL_Node* x = y->left;
-    struct AVL_Node* T2 = x->right;
+// 오른쪽 회전
+struct AVL_Node* rightRotate(struct AVL_Node* b) {
+    struct AVL_Node* a = b->left;
+    struct AVL_Node* t = a->right;
 
-    x->right = y;
-    y->left = T2;
+    a->right = b;
+    b->left = t;
 
-    y->height = max(height(y->left), height(y->right)) + 1;
-    x->height = max(height(x->left), height(x->right)) + 1;
+    b->height = max(height(b->left), height(b->right)) + 1;
+    a->height = max(height(a->left), height(a->right)) + 1;
 
-    return x;
+    return a;
 }
 
-// Left rotate
-struct AVL_Node* leftRotate(struct AVL_Node* x) {
-    struct AVL_Node* y = x->right;
-    struct AVL_Node* T2 = y->left;
+// 왼쪽 회전
+struct AVL_Node* leftRotate(struct AVL_Node* a) {
+    struct AVL_Node* b = a->right;
+    struct AVL_Node* t = b->left;
 
-    y->left = x;
-    x->right = T2;
+    b->left = a;
+    a->right = t;
 
-    x->height = max(height(x->left), height(x->right)) + 1;
-    y->height = max(height(y->left), height(y->right)) + 1;
+    a->height = max(height(a->left), height(a->right)) + 1;
+    b->height = max(height(b->left), height(b->right)) + 1;
 
-    return y;
+    return b;
 }
 
 /*
@@ -72,50 +73,40 @@ struct AVL_Node* AVL_create_node(int key) {
  * 실패시 (키가 있는 경우) 이외의 값 반환
  */
 int AVL_insert_node(struct AVL_Node** root, struct AVL_Node* new_node) {
-    // Find the correct position to insertNode the node and insertNode it
-    if (*root == NULL) {
+    if (*root == NULL) { // 처음 값을 대입
         *root = new_node;
-        return 0;
     }
-
-    if (new_node->key < (*root)->key) {
-        if ((*root)->left == NULL) {
-            (*root)->left = new_node;
+    else { // 이후의 값을 대입
+        if (new_node->key < (*root)->key) { // 부모 보다 키값이 작은 경우
+            AVL_insert_node(&(*root)->left, new_node); // 부모노드 왼쪽에 넣음
         }
-        else {
-            int asd = AVL_insert_node((*root)->left, new_node);
+        else if ((new_node->key > (*root)->key)) { // 부모 보다 키값이 큰 경우
+            AVL_insert_node(&(*root)->right, new_node); // 부모노드 오른쪽에 넣음
         }
-    }
-    else if ((new_node->key > (*root)->key)) {
-        if ((*root)->right == NULL) {
-            (*root)->right = new_node;
+        else { // 같은 경우, 연산 안하고 종료
+            return -1;
         }
-        else {
-            int asd = AVL_insert_node((*root)->right, new_node);
+
+        (*root)->height = 1 + max(height((*root)->left), height((*root)->right)); // 높이 계산
+
+        int balance = getBalance(*root); // 밸런스 팩터 값 대입
+        if (balance > 1 && new_node->key < (*root)->left->key) { // LL삽입
+            *root = rightRotate((*root));
         }
-    }
-    else
-        return -1;
 
-    // Update the balance factor of each node and
-    // Balance the tree
-    (*root)->height = 1 + max(height((*root)->left), height((*root)->right));
+        if (balance < -1 && new_node->key >(*root)->right->key) { // RR삽입
+            *root = leftRotate((*root));
+        }
 
-    int balance = getBalance(*root);
-    if (balance > 1 && new_node->key < (*root)->left->key)
-        *root = rightRotate(*root);
+        if (balance > 1 && new_node->key > (*root)->left->key) { // LR삽입
+            (*root)->left = leftRotate((*root)->left);
+            *root = rightRotate((*root));
+        }
 
-    if (balance < -1 && new_node->key >(*root)->right->key)
-        *root = leftRotate(*root);
-
-    if (balance > 1 && new_node->key > (*root)->left->key) {
-        (*root)->left = leftRotate((*root)->left);
-        *root = rightRotate(*root);
-    }
-
-    if (balance < -1 && new_node->key < (*root)->right->key) {
-        (*root)->right = rightRotate((*root)->right);
-        *root = leftRotate(*root);
+        if (balance < -1 && new_node->key < (*root)->right->key) { // RL삽입
+            (*root)->right = rightRotate((*root)->right);
+            *root = leftRotate((*root));
+        }
     }
 
     return 0;
