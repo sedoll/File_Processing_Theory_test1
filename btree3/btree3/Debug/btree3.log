@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\donha\OneDrive\바탕 화면\git\File_Processing_Theory_test1\btree3\btree3\main.c(345,20): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\donha\OneDrive\바탕 화면\git\File_Processing_Theory_test1\btree3\btree3\main.c(345,19): warning C4024: 'searching': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\donha\OneDrive\바탕 화면\git\File_Processing_Theory_test1\btree3\btree3\main.c(330,9): warning C4101: 'item' :참조되지 않은 지역 변수입니다.
+C:\Users\donha\OneDrive\바탕 화면\git\File_Processing_Theory_test1\btree3\btree3\main.c(330,15): warning C4101: 'ch' :참조되지 않은 지역 변수입니다.
+  btree3.vcxproj -> C:\Users\donha\OneDrive\바탕 화면\git\File_Processing_Theory_test1\btree3\Debug\btree3.exe

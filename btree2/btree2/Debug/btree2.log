@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\donha\OneDrive\바탕 화면\git\File_Processing_Theory_test1\btree2\btree2\main.c(317,9): warning C4101: 'predecessor' :참조되지 않은 지역 변수입니다.
+C:\Users\donha\OneDrive\바탕 화면\git\File_Processing_Theory_test1\btree2\btree2\main.c(332,9): warning C4101: 'successor' :참조되지 않은 지역 변수입니다.
+  btree2.vcxproj -> C:\Users\donha\OneDrive\바탕 화면\git\File_Processing_Theory_test1\btree2\Debug\btree2.exe
