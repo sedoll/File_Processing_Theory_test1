@@ -2,7 +2,8 @@
 #define __BTREE_H__
 
 #define MAX_CHILDREN 3 
-#define MAX_KEYS MAX_CHILDREN-1 
+#define MAX_KEYS MAX_CHILDREN-1
+#define MIN_KEYS (int)(ceil(M/2.0))-1 // 최소 키개수 구하는 식
 
 struct KeyPair
 {
@@ -22,7 +23,15 @@ struct BTNode
     struct KeyPair keys[MAX_KEYS];
     /* 자식 노드 포인터 배열 */
     struct BTNode* children[MAX_CHILDREN];
+    // leaf 노드 여부
+    bool leaf;
 };
+
+struct BTNode* splitNode(int pos, struct BTNode* node, struct BTNode* parent);
+
+struct BTNode* insertNode(int parent_pos, int val, struct BTNode* node, struct BTNode* parent);
+
+
 
 /*
  * B-Tree 노드를 생성

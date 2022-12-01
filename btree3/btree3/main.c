@@ -321,8 +321,6 @@ int main() {
 
     traversal(root);
 
-    searching(20, 9, root);
-
     delete (20, root);
     printf("\n");
     traversal(root);
