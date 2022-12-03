@@ -23,15 +23,13 @@ struct BTNode
     struct KeyPair keys[MAX_KEYS];
     /* 자식 노드 포인터 배열 */
     struct BTNode* children[MAX_CHILDREN];
-    // leaf 노드 여부
-    bool leaf;
 };
 
-struct BTNode* splitNode(int pos, struct BTNode* node, struct BTNode* parent);
-
-struct BTNode* insertNode(int parent_pos, int val, struct BTNode* node, struct BTNode* parent);
-
-
+//struct BTNode* root;
+//
+//struct BTNode* splitNode(int pos, struct BTNode* node, struct BTNode* parent);
+//
+//struct BTNode* insertNode(int parent_pos, int val, struct BTNode* node, struct BTNode* parent);
 
 /*
  * B-Tree 노드를 생성
@@ -39,6 +37,8 @@ struct BTNode* insertNode(int parent_pos, int val, struct BTNode* node, struct B
  * 할당된 메모리 주소 반환
  */
 struct BTNode* BT_create_node(void);
+
+struct BTNode* BT_create_node(int i);
 
 /*
  * 트리의 루트부터 시작하여 주어진 키를 가지는 노드를 탐색
