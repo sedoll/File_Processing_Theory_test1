@@ -13,9 +13,9 @@ int main(void)
 {
 	BTNode* root = NULL; 
 	int i, rand_key;
-
+	KeyPair kp;
 	for (i = 0; i < MAX_TEST_COUNT; i++) {
-		KeyPair kp = { rand() % MAX_KEY_RANGE , rand() };
+		kp = { rand() % MAX_KEY_RANGE , rand() };
 		BT_insert_key(&root, kp);
 		printf("%d, %d\n", kp.key, kp.offset);
 	}

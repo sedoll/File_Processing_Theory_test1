@@ -3,7 +3,7 @@
 
 #define MAX_CHILDREN 3 
 #define MAX_KEYS MAX_CHILDREN-1
-#define MIN_KEYS (int)(ceil(M/2.0))-1 // 최소 키개수 구하는 식
+#define MIN_KEYS (int)(ceil(MAX_CHILDREN/2.0))-1 // 최소 키개수 구하는 식
 
 struct KeyPair
 {
@@ -15,6 +15,7 @@ struct KeyPair
 
 struct BTNode
 {
+    bool leaf;
     /* 노드가 가진 키의 수 */
     int num_keys;
     /* 노드가 가진 자식 노드의 수 */
@@ -25,11 +26,29 @@ struct BTNode
     struct BTNode* children[MAX_CHILDREN];
 };
 
-//struct BTNode* root;
-//
-//struct BTNode* splitNode(int pos, struct BTNode* node, struct BTNode* parent);
-//
-//struct BTNode* insertNode(int parent_pos, int val, struct BTNode* node, struct BTNode* parent);
+struct BTNode* splitNode(int pos, struct BTNode* node, struct BTNode* root);
+
+void mNode(struct BTNode* par_node, int node_pos, int mer_node_pos);
+
+void bFLeft(struct BTNode* par_node, int cur_node_pos);
+
+void bFRight(struct BTNode* par_node, int cur_node_pos);
+
+void balNode(struct BTNode* node, int child_pos);
+
+int mChildNode(struct BTNode* par_node, int cur_node_pos);
+
+int findPredecessor(struct BTNode* cur_node);
+
+int overridePredecessor(struct BTNode* par_node, int pos_std_search);
+
+int findSuccessor(struct BTNode* cur_node);
+
+int overrideSuccessor(struct BTNode* par_node, int pos_std_search);
+
+void deleteInnerNode(struct BTNode* cur_node, int cur_node_pos);
+
+int deleteValFromNode(int val, struct BTNode* node);
 
 /*
  * B-Tree 노드를 생성
@@ -37,8 +56,6 @@ struct BTNode
  * 할당된 메모리 주소 반환
  */
 struct BTNode* BT_create_node(void);
-
-struct BTNode* BT_create_node(int i);
 
 /*
  * 트리의 루트부터 시작하여 주어진 키를 가지는 노드를 탐색

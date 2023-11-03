@@ -1,2 +1,7 @@
 ﻿  btree.cpp
-  B-Tree.vcxproj -> C:\Users\donha\OneDrive\바탕 화면\git\File_Processing_Theory_test1\FileStructureBTR\x64\Debug\B-Tree.exe
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureBTR\B-Tree\btree.cpp(264,9): warning C4101: 'predecessor' :참조되지 않은 지역 변수입니다.
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureBTR\B-Tree\btree.cpp(278,9): warning C4101: 'successor' :참조되지 않은 지역 변수입니다.
+  main.cpp
+C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureBTR\B-Tree\main.cpp(15,9): warning C4101: 'rand_key' :참조되지 않은 지역 변수입니다.
+  코드를 생성하고 있습니다...
+  B-Tree.vcxproj -> C:\Users\sehoon\Desktop\git\File_Processing_Theory_test1\FileStructureBTR\x64\Debug\B-Tree.exe
